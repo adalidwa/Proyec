@@ -1,0 +1,3 @@
+# Mantener esta carpeta en el repositorio
+# Carpeta: services/api
+# Propósito: Configuración de API, interceptors y cliente HTTP (axios, fetch)

@@ -1,0 +1,10 @@
+.privacy-content-grid {
+  display: grid;
+  gap: 2rem 4rem;
+}
+
+@media (min-width: 768px) {
+  .privacy-content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,115 @@
+/* SocialIcon.css */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon__icon {
+  color: var(--pri-700);
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover .social-icon__icon {
+  color: var(--acc-500);
+}
+
+/* Size variants */
+.social-icon--small {
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon--small .social-icon__icon {
+  font-size: 18px;
+}
+
+.social-icon--medium {
+  width: 48px;
+  height: 48px;
+}
+
+.social-icon--medium .social-icon__icon {
+  font-size: 20px;
+}
+
+.social-icon--large {
+  width: 56px;
+  height: 56px;
+}
+
+.social-icon--large .social-icon__icon {
+  font-size: 24px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .social-icon--small {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-icon--small .social-icon__icon {
+    font-size: 20px;
+  }
+
+  .social-icon--medium {
+    width: 52px;
+    height: 52px;
+  }
+
+  .social-icon--medium .social-icon__icon {
+    font-size: 22px;
+  }
+
+  .social-icon--large {
+    width: 60px;
+    height: 60px;
+  }
+
+  .social-icon--large .social-icon__icon {
+    font-size: 26px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1440px) {
+  .social-icon--small {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-icon--small .social-icon__icon {
+    font-size: 22px;
+  }
+
+  .social-icon--medium {
+    width: 56px;
+    height: 56px;
+  }
+
+  .social-icon--medium .social-icon__icon {
+    font-size: 24px;
+  }
+
+  .social-icon--large {
+    width: 64px;
+    height: 64px;
+  }
+
+  .social-icon--large .social-icon__icon {
+    font-size: 28px;
+  }
+}

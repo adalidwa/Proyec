@@ -1,0 +1,49 @@
+/* src/assets/styles/components/ui/brand-logo.styles.css */
+/* ============================================
+   BRAND LOGO COMPONENT STYLES - MOBILE FIRST
+============================================ */
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.brand-logo:hover {
+  transform: scale(1.02);
+}
+
+.brand-logo-text {
+  font: var(--font-20);
+  font-weight: 700;
+  color: var(--pri-900);
+  letter-spacing: -0.02em;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .brand-logo-text {
+    font: var(--font-25);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .brand-logo-text {
+    font: var(--font-31);
+  }
+}
+
+/* Brand logo sizes - overrides responsive */
+.brand-logo.small .brand-logo-text {
+  font: var(--font-16) !important;
+}
+
+.brand-logo.medium .brand-logo-text {
+  font: var(--font-20) !important;
+}
+
+.brand-logo.large .brand-logo-text {
+  font: var(--font-25) !important;
+}

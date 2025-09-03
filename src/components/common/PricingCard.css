@@ -1,0 +1,58 @@
+.pricing-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  border: 1px solid var(--pri-200);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 340px;
+  box-sizing: border-box;
+}
+
+.pricing-card--highlight {
+  border: 0.5px solid var(--acc-500);
+}
+
+.pricing-card__button {
+  margin-top: auto;
+}
+
+.custom-button--pricingcard {
+  min-height: 30px !important;
+  height: 30px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-size: var(--font-13) !important;
+  width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .pricing-card {
+    width: 100%;
+    max-width: 340px;
+    min-height: 500px;
+    box-sizing: border-box;
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .pricing-card {
+    padding: 1.5rem 3rem;
+    margin: 0;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1025px) {
+  .pricing-card {
+    max-width: 360px;
+    padding: 2rem 4rem;
+  }
+}

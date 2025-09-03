@@ -1,0 +1,123 @@
+/* src/assets/styles/components/layout/institutional-header.layout.styles.css */
+/* ============================================
+   INSTITUTIONAL HEADER LAYOUT STYLES
+============================================ */
+
+/* ============================================
+   CONTAINER SYSTEM - MOBILE FIRST
+============================================ */
+.container {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Tablet (>= 768px = 680px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 680px;
+    padding: 0 24px;
+  }
+}
+
+/* Desktop (>= 1440px = 1120px) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1120px;
+    padding: 0 40px;
+  }
+}
+
+/* ============================================
+   INSTITUTIONAL HEADER MAIN LAYOUT
+============================================ */
+.institutional-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.institutional-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.institutional-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .institutional-header-content {
+    height: 80px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .institutional-header-content {
+    height: 90px;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+============================================ */
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: flex;
+  }
+}
+
+.mobile-only {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY & FOCUS STATES
+============================================ */
+.institutional-header *:focus {
+  outline: 2px solid var(--sec-600);
+  outline-offset: 2px;
+}
+
+.institutional-header *:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================
+   PRINT STYLES
+============================================ */
+@media print {
+  .institutional-header {
+    position: static;
+    box-shadow: none;
+    border-bottom: 1px solid var(--pri-200);
+  }
+
+  .mobile-only,
+  .mobile-menu-overlay,
+  .mobile-menu-backdrop {
+    display: none !important;
+  }
+}

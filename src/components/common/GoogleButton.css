@@ -1,0 +1,39 @@
+/* Botón base de Google */
+.google-button {
+  background-color: var(--white);
+  color: var(--pri-900);
+  border: 1px solid #dadce0;
+  font-weight: normal;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.google-button:hover:not(.google-button--disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.google-button:active:not(.google-button--disabled) {
+  transform: translateY(0);
+}
+
+.google-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.25);
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.google-button__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}

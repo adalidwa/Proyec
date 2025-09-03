@@ -1,0 +1,31 @@
+.display-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 50px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.display-card__icon {
+  border-radius: 5px;
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-card__title {
+  font: var(--font-25);
+  color: var(--pri-600);
+  font-weight: 600;
+  margin: 10px 0;
+}
+.display-card__content {
+  font: var(--font-16);
+  color: var(--pri-600);
+  line-height: 1.5;
+  font-weight: 300;
+}

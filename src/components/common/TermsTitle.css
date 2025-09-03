@@ -1,0 +1,31 @@
+.terms-title {
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--pri-200);
+}
+
+.terms-title__heading {
+  font: var(--font-39);
+  font-weight: 700;
+  color: var(--pri-900);
+  margin: 0 0 0.5rem 0;
+}
+
+.terms-title__subtitle {
+  font: var(--font-16);
+  color: var(--pri-600);
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .terms-title {
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .terms-title__heading {
+    font: var(--font-31);
+    font-weight: 700;
+  }
+}

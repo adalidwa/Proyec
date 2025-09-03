@@ -1,0 +1,62 @@
+/* src/assets/styles/components/ui/menu-toggle-button.styles.css */
+/* ============================================
+   MENU TOGGLE BUTTON (HAMBURGER) STYLES - MOBILE FIRST
+============================================ */
+
+.menu-toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition-fast);
+}
+
+/* Oculta en tablet y desktop */
+@media (min-width: 768px) {
+  .menu-toggle-button {
+    display: none;
+  }
+}
+
+.menu-toggle-line {
+  width: 24px;
+  height: 2px;
+  background: var(--pri-700);
+  border-radius: 1px;
+  transition: var(--transition-fast);
+  transform-origin: center;
+}
+
+.menu-toggle-line:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+/* Menu toggle animation when open */
+.menu-toggle-button.is-open .menu-toggle-line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle-button.is-open .menu-toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle-button.is-open .menu-toggle-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Hover effects */
+.menu-toggle-button:hover .menu-toggle-line {
+  background: var(--sec-700);
+}
+
+/* Focus styles */
+.menu-toggle-button:focus {
+  outline: 2px solid var(--sec-600);
+  outline-offset: 2px;
+}

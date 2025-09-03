@@ -1,0 +1,126 @@
+.comment-section {
+  padding: 40px 0;
+  background-color: var(--bg-500);
+  font-family: var(--font);
+}
+
+.comment-section__container {
+  padding: 40px 16px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.comment-section__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment-section__action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-section__button {
+  text-transform: lowercase;
+  font: var(--font-16);
+  font-weight: 500;
+  padding: 12px 32px;
+  border-radius: 8px;
+  background-color: var(--acc-600);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.comment-section__button:hover {
+  background-color: var(--acc-700);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(251, 61, 10, 0.3);
+}
+
+.comment-section__button:active {
+  background-color: var(--acc-800);
+  transform: translateY(0);
+}
+
+.comment-section__button:disabled {
+  background-color: var(--pri-300);
+  color: var(--pri-500);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 380px) {
+  .comment-section {
+    padding: 80px 0;
+  }
+
+  .comment-section__container {
+    padding: 40px 16px;
+  }
+
+  .comment-section__button {
+    width: auto;
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .comment-section {
+    padding: 110px 0;
+  }
+
+  .comment-section__container {
+    max-width: 680px;
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .comment-section__container {
+    padding: 40px 160px;
+    max-width: 1440px;
+  }
+
+  .comment-section__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .hero-title {
+    text-align: left;
+  }
+
+  .comment-section__action {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1440px) {
+  .comment-section__container {
+    max-width: 1440px;
+  }
+
+  .comment-section__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-title__description--body-large {
+    line-height: 1.5;
+    font-weight: 300;
+  }
+}

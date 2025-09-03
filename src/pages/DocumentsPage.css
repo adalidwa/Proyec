@@ -1,0 +1,109 @@
+.documentsPage {
+  background-color: var(--bg-500);
+  font-family: var(--font);
+  padding: 5rem 0;
+  min-height: 50vh;
+  box-sizing: border-box;
+}
+
+.documentsPage__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.documentsPage__header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.documentsPage__title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--pri-900);
+  margin: 0;
+}
+
+.documentsPage__lastUpdate {
+  font-size: 0.875rem;
+  color: var(--pri-500);
+  margin: 0;
+}
+
+.documentsPage__contentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.documentationCard {
+  background-color: var(--bg-500);
+  padding: 0 24px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.documentationCard__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: var(--pri-900);
+  position: relative;
+}
+
+.documentationCard__title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--pri-500);
+  margin-top: 12px;
+}
+
+.documentationCard__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.documentationCard__item {
+  margin-bottom: 8px;
+  color: var(--pri-600);
+}
+
+.documentationCard__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .documentsPage__container {
+    padding: 0 40px;
+  }
+
+  .documentsPage__title {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--pri-900);
+    margin: 0;
+  }
+
+  .documentsPage__contentGrid {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .documentsPage__container {
+    padding: 1rem 160px;
+  }
+
+  .documentsPage__title {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--pri-900);
+    margin: 0;
+  }
+}

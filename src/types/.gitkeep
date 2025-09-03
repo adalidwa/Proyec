@@ -1,0 +1,3 @@
+# Mantener esta carpeta en el repositorio
+# Carpeta: types
+# Propósito: Definiciones de TypeScript centralizadas (api.ts, auth.ts, common.ts)

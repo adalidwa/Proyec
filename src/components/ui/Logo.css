@@ -1,0 +1,82 @@
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.logo__image {
+  display: block;
+}
+
+.logo__text {
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--pri-600);
+}
+
+.logo--small .logo__image {
+  width: 24px;
+  height: 24px;
+}
+
+.logo--small .logo__text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.logo--small .logo__icon {
+  margin-right: 10px;
+}
+
+.logo--medium .logo__image {
+  width: 30px;
+  height: 30px;
+}
+
+.logo--medium .logo__text {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.logo--large .logo__image {
+  width: 36px;
+  height: 36px;
+}
+
+.logo--large .logo__text {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.logo--large .logo__icon {
+  margin-right: 20px;
+}
+
+.logo:hover .logo__image {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.logo:hover .logo__text {
+  color: var(--pri-700);
+  transition: color 0.2s ease;
+}
+
+.logo--white .logo__text {
+  color: var(--bg-50);
+}
+
+.logo--white:hover .logo__text {
+  color: var(--sec-300);
+}

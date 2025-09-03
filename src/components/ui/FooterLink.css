@@ -1,0 +1,28 @@
+.footer-link {
+  display: block;
+  font: var(--font-16);
+  font-weight: 200;
+  color: var(--bg-50);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  color: var(--sec-300);
+  transform: translateX(4px);
+}
+
+@media (max-width: 480px) {
+  .footer-link {
+    font: var(--font-20);
+    font-weight: 200;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer-link {
+    font: var(--font-16);
+    font-weight: 200;
+  }
+}

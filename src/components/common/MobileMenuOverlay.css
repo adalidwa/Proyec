@@ -1,0 +1,111 @@
+/* src/assets/styles/components/common/mobile-menu-overlay.styles.css */
+/* ============================================
+   MOBILE MENU OVERLAY STYLES - MOBILE FIRST
+============================================ */
+
+/* ============================================
+   MOBILE MENU PANEL
+============================================ */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 60px; /* Altura del header en mobile */
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-top: 1px solid var(--pri-100);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .mobile-menu-overlay {
+    top: 70px;
+    max-height: calc(100vh - 70px);
+  }
+}
+
+.mobile-menu-overlay.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-content {
+  padding: 24px 0;
+}
+
+.mobile-menu-actions {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--pri-100);
+}
+
+/* ============================================
+   MOBILE MENU BACKDROP
+============================================ */
+.mobile-menu-backdrop {
+  position: fixed;
+  top: 60px; /* Altura del header en mobile */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 998;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .mobile-menu-backdrop {
+    top: 70px;
+  }
+}
+
+.mobile-menu-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hide mobile menu and backdrop on desktop */
+@media (min-width: 768px) {
+  .mobile-menu-overlay,
+  .mobile-menu-backdrop {
+    display: none !important;
+  }
+}
+
+/* Smooth scrolling for mobile menu */
+.mobile-menu-overlay {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mobile-menu-overlay::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animation improvements */
+.mobile-menu-overlay {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Better touch targets on mobile */
+@media (max-width: 767px) {
+  .mobile-menu-content {
+    padding: 32px 0;
+  }
+
+  .mobile-menu-actions {
+    margin-top: 32px;
+    padding-top: 32px;
+  }
+}

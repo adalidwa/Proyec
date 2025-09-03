@@ -1,0 +1,11 @@
+.terms-subsection {
+  margin-top: 1.5rem;
+  font: var(--font);
+}
+
+.terms-subsection__title {
+  font: var(--font-16);
+  font-weight: 600;
+  color: var(--pri-900);
+  margin: 0 0 0.75rem 0;
+}

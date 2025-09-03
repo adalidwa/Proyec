@@ -1,0 +1,164 @@
+.comment-card {
+  width: 100%;
+  height: 280px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--font);
+  box-sizing: border-box;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 4px;
+  transition: color 0.2s ease;
+}
+
+.star-active {
+  color: var(--var-600);
+}
+
+.star-inactive {
+  color: var(--pri-200);
+}
+
+.star:hover {
+  opacity: 0.8;
+}
+
+.quote-section {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.quote-icon {
+  color: var(--acc-500);
+  font-size: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.message {
+  font: var(--font-16);
+  color: var(--pri-600);
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-weight: 300;
+  word-break: break-word;
+  max-height: calc(1.4em * 6);
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-initial {
+  width: 100%;
+  height: 100%;
+  background: var(--acc-500);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--font-20);
+  font-weight: 600;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font: var(--font-16);
+  color: var(--pri-800);
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.user-position {
+  font: var(--font-13);
+  color: var(--pri-500);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .comment-card {
+    width: 360px;
+    height: 300px;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .quote-icon {
+    font: var(--font-20);
+  }
+
+  .message {
+    font: var(--font-16);
+    line-height: 1.5;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    max-height: calc(1.5em * 6);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .user-name {
+    font: var(--font-16);
+  }
+
+  .user-position {
+    font: var(--font-13);
+  }
+
+  .star {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .comment-card {
+    width: 100%;
+  }
+}

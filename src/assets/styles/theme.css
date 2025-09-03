@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  /* ========================================
+     VARIABLES GENERALES DEL SISTEMA
+     (Aplicables a todo el proyecto)
+  ======================================== */
+
+  /* Primary Colors - Sistema */
+  --pri-900: #242231;
+  --pri-800: #322f44;
+  --pri-700: #39364e;
+  --pri-600: #403d58;
+  --pri-500: #8d89ad;
+  --pri-400: #a3a0bd;
+  --pri-300: #bab8ce;
+  --pri-200: #d1d0de;
+  --pri-100: #f0f0f5;
+
+  /* Secondary Colors - Sistema */
+  --sec-900: #2ca8a1;
+  --sec-800: #33c3bc;
+  --sec-700: #4ad0c9;
+  --sec-600: #66d7d1;
+  --sec-500: #aae9e5;
+  --sec-400: #bbedeb;
+  --sec-300: #ccf2f0;
+  --sec-200: #ddf6f5;
+  --sec-100: #eafaf9;
+
+  /* Accent Colors - Sistema */
+  --acc-900: #b72903;
+  --acc-800: #dc3204;
+  --acc-700: #fb3d0a;
+  --acc-600: #fb5a2e;
+  --acc-500: #fc7753;
+  --acc-400: #fdb39f;
+  --acc-300: #fec3b3;
+  --acc-200: #fed2c6;
+  --acc-100: #fee1d9;
+  --acc-50: #ffebe5;
+
+  /* Background Colors - Sistema */
+  --bg-900: #a18b67;
+  --bg-800: #b5a488;
+  --bg-700: #cabda9;
+  --bg-600: #ded6c9;
+  --bg-500: #f2efea;
+  --bg-400: #f8f6f3;
+  --bg-300: #f9f8f6;
+  --bg-200: #fbfaf8;
+  --bg-100: #fcfbfa;
+  --bg-50: #fefdfd;
+
+  /* Variable Colors - Sistema */
+  --var-900: #928c24;
+  --var-800: #b0a82c;
+  --var-700: #ccc433;
+  --var-600: #d4cd51;
+  --var-500: #dbd56e;
+  --var-400: #ebe8ae;
+  --var-300: #efecbf;
+  --var-200: #f3f1cf;
+  --var-100: #f7f6df;
+  --var-50: #faf9eb;
+
+  /* Typography - General */
+  --font: 'Inter', sans-serif;
+
+  /* Font Presets - General */
+  --font-61: 61px/1.1 var(--font);
+  --font-49: 49px/1.1 var(--font);
+  --font-39: 39px/1.1 var(--font);
+  --font-31: 31px/1.1 var(--font);
+  --font-25: 25px/1.1 var(--font);
+  --font-20: 20px/1.1 var(--font);
+  --font-16: 16px/1.1 var(--font);
+  --font-14: 14px/1.1 var(--font);
+  --font-13: 13px/1.1 var(--font);
+  --font-10: 10px/1.1 var(--font);
+
+  /* Basic Colors - General */
+  --black: #000;
+  --white: #fff;
+  --transparent: transparent;
+
+  /* ========================================
+     VARIABLES ESPECÍFICAS LANDING PAGE
+     (Solo para página institucional)
+  ======================================== */
+
+  /* Landing - Hero Section */
+  --hero-bg: linear-gradient(135deg, var(--pri-800) 0%, var(--pri-600) 100%);
+  --hero-overlay: rgba(36, 34, 49, 0.8);
+  --hero-text: var(--white);
+  --hero-subtitle: var(--pri-100);
+
+  /* Landing - Sections Background */
+  --section-bg-primary: var(--bg-50);
+  --section-bg-alternate: var(--white);
+  --section-bg-dark: var(--pri-900);
+
+  /* Landing - Cards */
+  --card-bg: var(--white);
+  --card-shadow: 0 4px 20px rgba(36, 34, 49, 0.1);
+  --card-hover-shadow: 0 8px 30px rgba(36, 34, 49, 0.15);
+  --card-border: var(--pri-100);
+
+  /* Landing - CTA Buttons */
+  --cta-primary-bg: var(--sec-700);
+  --cta-primary-hover: var(--sec-600);
+  --cta-primary-text: var(--white);
+  --cta-secondary-bg: var(--transparent);
+  --cta-secondary-border: var(--sec-700);
+  --cta-secondary-text: var(--sec-700);
+  --cta-secondary-hover-bg: var(--sec-700);
+  --cta-secondary-hover-text: var(--white);
+
+  /* Landing - Text Colors */
+  --landing-heading: var(--pri-900);
+  --landing-subheading: var(--pri-700);
+  --landing-body: var(--pri-600);
+  --landing-muted: var(--pri-500);
+
+  /* Landing - Organigrama */
+  --org-card-bg: var(--white);
+  --org-card-shadow: var(--card-shadow);
+  --org-name: var(--pri-800);
+  --org-position: var(--sec-700);
+  --org-department: var(--pri-500);
+
+  /* Landing - Contact Section */
+  --contact-bg: var(--pri-900);
+  --contact-text: var(--white);
+  --contact-accent: var(--sec-400);
+  --contact-form-bg: var(--white);
+  --contact-input-border: var(--pri-200);
+  --contact-input-focus: var(--sec-600);
+
+  /* Landing - Spacing */
+  --section-padding: 80px 0;
+  --container-max-width: 1200px;
+  --container-padding: 0 20px;
+
+  /* Landing - Animations */
+  --transition-smooth: all 0.3s ease;
+  --transition-fast: all 0.2s ease;
+  --animation-duration: 0.6s;
+
+  /* Landing - Responsive Breakpoints */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1200px;
+}

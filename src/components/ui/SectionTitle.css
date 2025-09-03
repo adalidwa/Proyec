@@ -1,0 +1,19 @@
+.section-title {
+  font: var(--font-20);
+  font-weight: 700;
+  color: var(--bg-50);
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .section-title {
+    line-height: 24px;
+  }
+}

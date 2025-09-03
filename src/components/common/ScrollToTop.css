@@ -1,0 +1,44 @@
+.scroll-loader {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.scroll-loader__icon {
+  width: 32px;
+  height: 32px;
+  border: 4px solid #fc7753;
+  border-top: 4px solid #dbd56e;
+  border-radius: 50%;
+  animation: scroll-spin 0.5s linear infinite;
+}
+
+@keyframes scroll-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body.scrolling-bg {
+  transition: background 0.4s;
+  background: linear-gradient(90deg, rgba(252, 119, 83, 0.04) 0%, rgba(219, 213, 110, 0.04) 100%);
+}
+@keyframes fadeInApp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body.scrolling-bg {
+  transition: background 0.4s;
+  background: linear-gradient(90deg, rgba(252, 119, 83, 0.04) 0%, rgba(219, 213, 110, 0.04) 100%);
+}

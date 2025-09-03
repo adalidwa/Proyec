@@ -1,0 +1,9 @@
+.terms-page__container {
+  padding: 50px 16px;
+}
+
+@media (max-width: 1024px) {
+  .terms-page__container {
+    padding: 30px 16px;
+  }
+}
