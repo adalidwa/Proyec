@@ -1,4 +1,3 @@
-import React from 'react';
 import './TermsSubSection.css';
 
 interface TermsSubSectionProps {

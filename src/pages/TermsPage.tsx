@@ -1,4 +1,3 @@
-import React from 'react';
 import TermsTitle from '../components/common/TermsTitle';
 import './TermsPage.css';
 import TermsContent from '../components/layout/TermsContent';

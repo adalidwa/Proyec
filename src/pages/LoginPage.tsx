@@ -42,20 +42,21 @@ const LoginPage: React.FC = () => {
     setError(null);
     setLoading(true);
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password);
       // Usuario logueado
       navigate('/');
-    } catch (err) {
-      if (err.code === 'auth/user-not-found') {
+    } catch (error) {
+      const firebaseError = error as any;
+      if (firebaseError.code === 'auth/user-not-found') {
         setError('No existe una cuenta con ese correo.');
-      } else if (err.code === 'auth/wrong-password') {
+      } else if (firebaseError.code === 'auth/wrong-password') {
         setError('Contraseña incorrecta.');
-      } else if (err.code === 'auth/invalid-email') {
+      } else if (firebaseError.code === 'auth/invalid-email') {
         setError('Correo inválido.');
       } else {
-        setError('Error al iniciar sesión. ' + (err.message || 'Inténtalo de nuevo.'));
+        setError('Error al iniciar sesión. ' + (firebaseError.message || 'Inténtalo de nuevo.'));
       }
-      console.error(err);
+      console.error(error);
     }
     setLoading(false);
   };
@@ -120,7 +121,6 @@ const LoginPage: React.FC = () => {
               titleFontWeight='normal'
               containerWidth='full'
               height='small'
-              type='submit'
               disabled={loading}
             />
           </div>

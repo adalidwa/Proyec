@@ -84,12 +84,13 @@ const CommentSection: React.FC<CommentSectionProps> = ({
   gradientText = 'Clientes',
   comments = defaultComments,
   showMoreButton = true,
-  maxCommentsToShow,
+  maxCommentsToShow = 3,
   className = '',
 }) => {
   const [showMore, setShowMore] = useState(false);
 
-  const visibleComments = showMore ? [...defaultComments, ...moreComments] : defaultComments;
+  const allComments = showMore ? [...comments, ...moreComments] : comments;
+  const visibleComments = maxCommentsToShow ? allComments.slice(0, maxCommentsToShow) : allComments;
 
   const handleViewMore = (): void => {
     setShowMore(true);

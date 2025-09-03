@@ -60,7 +60,7 @@ const ContactPage: React.FC = () => {
         <iframe
           src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d478.1752802095031!2d-68.0870545934529!3d-16.53529145695847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21239926c7cd%3A0x2a399dfb88c485d6!2sEscuela%20Militar%20de%20Ingenier%C3%ADa%20-%20Unidad%20Acad%C3%A9mica%20La%20Paz!5e0!3m2!1ses!2sbo!4v1723447885351!5m2!1ses!2sbo'
           className='contact-map-iframe'
-          allowFullScreen=''
+          allowFullScreen={true}
           loading='lazy'
           referrerPolicy='no-referrer-when-downgrade'
           title='Ubicación de la Escuela Militar de Ingeniería en Google Maps'
